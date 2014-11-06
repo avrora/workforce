@@ -6,8 +6,11 @@ Router.route('/', function () {
 
   var user = Meteor.user();
   if (user) {
-    if(!Roles.userIsInRole(user, ['admin']))
+    if(Roles.userIsInRole(user, ['admin'])) {
+      Router.go('/control');
+    } else {
       Router.go('/view');
+    }
   }
 
 });
