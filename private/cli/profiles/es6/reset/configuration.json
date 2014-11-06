@@ -1,0 +1,20 @@
+{
+  "files" : [
+    {
+      "template" : "home.html",
+      "path" : "client/views/home/home.html"
+    },
+    {
+      "template" : "homeRoute.next.js",
+      "path" : "client/routes/homeRoute.next.js"
+    },
+    {
+      "template" : "layout.html",
+      "path" : "client/views/layouts/layout.html"
+    },
+    {
+      "template" : "routerConfig.next.js",
+      "path" : "client/config/router.next.js"
+    }
+  ]
+}

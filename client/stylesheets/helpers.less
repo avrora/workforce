@@ -1,0 +1,38 @@
+@import 'variables.less';
+@import 'lib/elements.less';
+
+/* -------------------
+    Helper styles
+   ------------------- */
+
+.padding-wrapper {
+    padding: 20px;
+}
+
+.aligned {
+    &.center {
+        text-align: center;
+    }
+
+    &.left {
+        text-align: left;
+    }
+
+    &.right {
+        text-align: right;
+    }
+}
+
+.link {
+    &.unstyled {
+        color: inherit;
+    }
+
+    &.no-underline {
+        text-decoration: none;
+    }
+
+    &.no-hover-styles:hover {
+        color: inherit;
+    }
+}

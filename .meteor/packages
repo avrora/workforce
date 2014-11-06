@@ -1,0 +1,23 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+standard-app-packages
+less
+jquery
+underscore
+aldeed:collection2
+iron:router
+raix:handlebar-helpers
+nooitaf:semantic-ui-less
+audit-argument-checks
+fastclick
+zimme:iron-router-active
+manuelschoebel:ms-seo
+useraccounts:semantic-ui
+accounts-password
+alanning:roles
+mrt:googlemaps
+mizzao:user-status
+

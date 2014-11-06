@@ -1,0 +1,29 @@
+<template name="view">
+    <div class="ui celled grid">
+        <div class="row">
+            <div class="five column">
+                <div id="map-canvas"></div>
+            </div>
+            <div class="three column">
+                <table class="ui sortable table segment">
+                    <thead>
+                    <tr><th>Command #</th>
+                        <th>Description</th>
+                    </tr></thead>
+                    <tbody class="itemsTableBody">
+                    {{#each commands}}
+                        {{> commandItem}}
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="commandItem">
+    <tr class="itemRow">
+        <td>{{command}}</td>
+        <td>{{geo.lat}},{{geo.lng}}</td>
+    </tr>
+</template>

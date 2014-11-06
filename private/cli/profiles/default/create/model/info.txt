@@ -1,0 +1,1 @@
+Creates a new Mongo.Collection with a Collection2 Schema

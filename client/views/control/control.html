@@ -1,0 +1,92 @@
+<template name="control">
+    <div class="ui celled grid">
+        <div class="row">
+            <div class="five column">
+                <div id="map-canvas"></div>
+            </div>
+            <div class="three column">
+                <table class="ui sortable table segment">
+                    <thead>
+                    <tr><th>Username</th>
+                        <th>Last Location</th>
+                        <th>Actions</th>
+                    </tr></thead>
+                    <tbody class="itemsTableBody">
+                    {{#each usersOnline}}
+                      {{> userItem}}
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui basic modal" id="waypoint-container">
+
+    </div>
+
+    <div class="ui basic modal" id="destination-container">
+
+    </div>
+</template>
+
+<template name="userItem">
+    <tr class="itemRow">
+        <td>{{username}}</td>
+        <td>{{lastLocation.lat}}, {{lastLocation.lng}}</td>
+        <td>
+            <div class="ui button" id="destination-button"><i class="bullseye icon"></i></div>
+            <div class="ui button" id="waypoint-button"><i class="map icon"></i></div>
+        </td>
+    </tr>
+</template>
+
+<template name="waypointModalForm">
+    <div class="header">
+        Send waypoint
+    </div>
+    <div class="content">
+        <form id="waypointLatLngForm" class="ui form">
+            <div class="field">
+                <div class="ui left input">
+                    <input name="lat" type="text" placeholder="Latitude">
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui left input">
+                    <input name="lng" type="text" placeholder="Longitude">
+                </div>
+            </div>
+            <div class="ui error message">
+                <div class="header">We noticed some issues</div>
+            </div>
+            <div class="ui green submit button">Send!</div>
+            <div class="ui red button">Nope</div>
+        </form>
+    </div>
+</template>
+
+<template name="destinationModalForm">
+    <div class="header">
+        Send destination
+    </div>
+    <div class="content">
+        <form id="destinationLatLngForm" class="ui form">
+            <div class="field">
+                <div class="ui left input">
+                    <input name="lat" type="text" placeholder="Latitude">
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui left input">
+                    <input name="lng" type="text" placeholder="Longitude">
+                </div>
+            </div>
+            <div class="ui error message">
+                <div class="header">We noticed some issues</div>
+            </div>
+            <div class="ui green submit button">Send!</div>
+            <div class="ui red button">Nope</div>
+        </form>
+    </div>
+</template>

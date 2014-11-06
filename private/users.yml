@@ -1,0 +1,14 @@
+admin:
+  email: admin@avrora.io
+  username: admin
+  password: secret
+
+admin_two:
+  email: admin2@avrora.io
+  username: admin2
+  password: secret
+
+test:
+  email: test@avrora.io
+  username: test
+  password: test
