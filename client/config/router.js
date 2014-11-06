@@ -9,6 +9,7 @@ Router.map(function (){
     template: 'control',
 
     onBeforeAction: function () {
+
       var user = Meteor.user();
       if (user) {
         if(!Roles.userIsInRole(user, ['admin'])) {
